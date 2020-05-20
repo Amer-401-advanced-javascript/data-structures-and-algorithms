@@ -13,3 +13,4 @@ in this challange we are required to use binary search algorithm to find the ind
 ## Solution
 <!-- Embedded whiteboard image -->
 ![Whiteboarding](./../../assets/array-binary-search.jpg)
+[GA](https://github.com/Amer-401-advanced-javascript/data-structures-and-algorithms/actions)
