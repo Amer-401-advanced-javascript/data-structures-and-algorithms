@@ -48,11 +48,67 @@ class LinkedList{
     return linkedListString;
     
   }
+
+  append(value){
+    // add the value at the end of the linked list
+    let currentNode = this.head;
+
+    if(!currentNode){
+      this.head = new Node(value);
+      return this.head;
+    }
+    
+    while( currentNode.next ){
+      currentNode = currentNode.next;
+    }
+    let node = new Node(value);
+    currentNode.next = node;    
+  }
+  
+
+  insertBeforeValue(searchedValue, insertThisValue){
+    // add a value before an exisiting value in the linked_list
+    let currentNode = this.head;
+    while(currentNode.next !== null){
+      if( currentNode.next.value !== searchedValue){
+        currentNode = currentNode.next;
+      } else {
+        let insertedNode  = new Node (insertThisValue);
+        insertedNode.next = currentNode.next;
+        currentNode.next = insertedNode;
+        return this;
+      }
+    }
+  }
+
+  insertAfter(searchedValue, insertThisValue){
+    // add this value after an already exisiting value in the linked_list
+
+    let currentNode = this.head;
+    while(currentNode.next !== null){
+      if( currentNode.value !== searchedValue){
+        currentNode = currentNode.next;
+      } else {
+        let insertedNode  = new Node (insertThisValue);
+        insertedNode.next = currentNode.next;
+        currentNode.next = insertedNode;
+        return this;
+      }
+    }
+
+  }
+
 }
 
-// let node = new LinkedList();
-// node.insert('hello');
-// node.insert('hello2');
-// // console.log(node);
-// node.toString();
+let node = new LinkedList();
+node.insert('hello1');
+node.insert('hello2');
+node.insert('hello3');
+node.insert('hello4');
+node.insert('hello5');
+node.insert('hello6');
+node.insertAfter('hello2', 'hey');
+console.log(node);
+console.log(node.toString());
+
 module.exports = LinkedList;
