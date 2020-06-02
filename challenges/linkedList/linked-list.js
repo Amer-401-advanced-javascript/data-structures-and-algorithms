@@ -6,6 +6,7 @@ class LinkedList{
 
   constructor(){
     this.head = null;
+    this.counter = 0;
   }
 
   insert(value){
@@ -19,20 +20,18 @@ class LinkedList{
       tailing = tailing.next;
     }
     tailing.next = node;
+    this.counter++;
   }
 
   includes(value){
     let currentNode = this.head;
     while(currentNode !== null){
       if(currentNode.value === value){
-        // console.log('true');
         return true;
       } else{  
         currentNode = currentNode.next;
       }
     }
-
-    // console.log('false');
     return false;
   }
 
@@ -62,7 +61,8 @@ class LinkedList{
       currentNode = currentNode.next;
     }
     let node = new Node(value);
-    currentNode.next = node;    
+    currentNode.next = node;
+    this.counter++;   
   }
   
 
@@ -76,6 +76,7 @@ class LinkedList{
         let insertedNode  = new Node (insertThisValue);
         insertedNode.next = currentNode.next;
         currentNode.next = insertedNode;
+        this.counter++; 
         return this;
       }
     }
@@ -92,23 +93,39 @@ class LinkedList{
         let insertedNode  = new Node (insertThisValue);
         insertedNode.next = currentNode.next;
         currentNode.next = insertedNode;
+        this.counter++; 
         return this;
       }
+    }
+    
+  }
+
+  readFromTheEnd(value){
+    if((typeof(value) === 'number') && (this.counter > value ) && (value > 0)){
+      let currentNode = this.head;
+      let reversedNumber = this.counter - value;
+      for(let i = 0; i < reversedNumber; i++){
+        currentNode = currentNode.next;
+      }
+      return currentNode.value;
+    }else{  
+      let warning = 'Enter a valid positive number less than the linked list node';
+      return warning;
     }
 
   }
 
 }
 
-let node = new LinkedList();
-node.insert('hello1');
-node.insert('hello2');
-node.insert('hello3');
-node.insert('hello4');
-node.insert('hello5');
-node.insert('hello6');
-node.insertAfter('hello2', 'hey');
-console.log(node);
-console.log(node.toString());
+// let node = new LinkedList();
+// node.insert('hello1');
+// node.insert('hello2');
+// node.insert('hello3');
+// node.insert('hello4');
+// node.insert('hello6');
+// node.readFromTheEnd(-1);
+// // node.insertAfter('hello4','hey');
+// console.log(node.toString());
+// console.log(node.counter);
 
 module.exports = LinkedList;
