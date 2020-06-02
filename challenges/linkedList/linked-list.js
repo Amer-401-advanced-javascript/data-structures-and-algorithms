@@ -123,7 +123,7 @@ class LinkedList{
 // node.insert('hello3');
 // node.insert('hello4');
 // node.insert('hello6');
-// node.readFromTheEnd(-1);
+// console.log(node.readFromTheEnd(1));
 // // node.insertAfter('hello4','hey');
 // console.log(node.toString());
 // console.log(node.counter);
