@@ -10,3 +10,4 @@ Data Structure and Algorithms Table of Content
 | Challange04  | [C04](https://github.com/Amer-401-advanced-javascript/data-structures-and-algorithms/tree/linked-list) |
 | Challange06  | [C06](https://github.com/Amer-401-advanced-javascript/data-structures-and-algorithms/tree/linked-list) |
 | Challange07  | [C07](https://github.com/Amer-401-advanced-javascript/data-structures-and-algorithms/tree/ll-insertions) |
+| Challange08  | [C08](https://github.com/Amer-401-advanced-javascript/data-structures-and-algorithms/tree/ll-merge) |
