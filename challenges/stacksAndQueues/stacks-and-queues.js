@@ -20,18 +20,21 @@ class Stack {
   }
 
   pop(){
-    let temp = this.top;
-    this.top = this.top.next;
-    temp.next = null;       
-    return temp.value;
+    if(this.top !== null){
+      let temp = this.top;
+      this.top = this.top.next;
+      temp.next = null;       
+      return temp.value;
+    } else {
+      return 'the Stack is empty';
+    }
   }
   peek(){
-    return this.top.value;
+    return this.top !==null ? this.top.value : 'the Stack is empty';  
   }
 
   isEmpty(){
-    let check = this.top === null ? true : false;
-    return check;
+    return this.top === null ? true : false;
   }
 
 }
@@ -41,27 +44,18 @@ class Stack {
 class Queue {
   constructor(){
     this.front = null;
-    // this.rear = null;
+    this.rear = null;
   }
 
   enqueue(value){
-    let node = new Node(value);
-    console.log('this is the node ====>', node);
-    
+    let node = new Node(value);    
     if(!this.front){
-      
       this.front = node;
       this.rear = node;
-      // console.log('oh this.front ====>',rear);
       return this;
     }
-    console.log(this.rear);
-    
     this.rear.next = node;
-    // console.log('this.front====>',this.front);
     this.rear = node;
-    // console.log('this.rear ====>',node);
-
   }
 
   dequeue(){
@@ -89,10 +83,14 @@ class Queue {
 // stacken.push(4);
 // console.log(stacken);
 
-let queuen = new Queue();
-queuen.enqueue(1);
-queuen.enqueue(2);
-queuen.enqueue(3);queuen.enqueue(4);
-// queuen.dequeue();
-console.log(queuen);
+// let queuen = new Queue();
+// queuen.enqueue(1);
+// queuen.enqueue(2);
+// queuen.enqueue(3);queuen.enqueue(4);
+// // queuen.dequeue();
+// console.log(queuen);
 
+module.exports = {
+  Stack : Stack,
+  Queue : Queue,
+};
