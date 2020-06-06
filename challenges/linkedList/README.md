@@ -8,7 +8,7 @@ Here we are trying to sort the data in linked list, check if a specific item doe
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
-insert() ====> time O(n), space O(1)
+insert() ====> time O(1), space O(1)
 
 includes() ===> time O(n), space O(1)
 
@@ -35,6 +35,18 @@ readFromTheEnd() ====> time O(n), space O(1)
 
 ## Solution
 <!-- Embedded whiteboard image -->
+( insert() )
+
+![Whiteboarding](./../../assets/linkedlistInsert.jpg)
+
+( includes() )
+
+![Whiteboarding](./../../assets/linkedlistIncludes.jpg)
+
+( toString() )
+
+![Whiteboarding](./../../assets/LinkedlistToString.jpg)
+
 (ll-insertions)
 
 ![Whiteboarding](./../../assets/linkedlistclass06(1).jpg)

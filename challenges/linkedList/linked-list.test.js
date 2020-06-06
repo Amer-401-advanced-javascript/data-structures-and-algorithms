@@ -14,11 +14,11 @@ describe('construct', () => {
 
     newNode.insert(initialValue);
     newNode.insert(secondValue);
-    expect(newNode.head.value).toEqual(initialValue);
-    expect(newNode.head.next.value).toEqual(secondValue);
+    expect(newNode.head.value).toEqual(secondValue);
+    expect(newNode.head.next.value).toEqual(initialValue);
     expect(newNode.includes(secondValue)).toBeTruthy();
     expect(newNode.includes('notHere')).toBeFalsy();
-    expect(newNode.toString()).toEqual(`{ ${initialValue} } => { ${secondValue} } => Null`);
+    expect(newNode.toString()).toEqual(`{ ${secondValue} } => { ${initialValue} } => Null`);
   });
   it('bad scenario for .readFromTheEnd()', ()=>{
     let node = new LinkedList();
@@ -44,7 +44,7 @@ describe('construct', () => {
     node.insert(2);
     node.insert(3);
     node.insert(4);
-    expect(node.readFromTheEnd(1)).toEqual(3);
+    expect(node.readFromTheEnd(1)).toEqual(2);
   });
 
 });
