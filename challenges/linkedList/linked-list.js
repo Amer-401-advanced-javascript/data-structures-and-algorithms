@@ -6,20 +6,13 @@ class LinkedList{
 
   constructor(){
     this.head = null;
-    this.counter = 0;
+    this.counter = -1;
   }
 
   insert(value){
     let node = new Node(value);
-    if(!this.head){
-      this.head = node;
-      return this;
-    }
-    let tailing = this.head;
-    while(tailing.next){
-      tailing = tailing.next;
-    }
-    tailing.next = node;
+    node.next = this.head;
+    this.head = node;
     this.counter++;
   }
 
@@ -123,6 +116,8 @@ class LinkedList{
 // node.insert('hello3');
 // node.insert('hello4');
 // node.insert('hello6');
+// console.log(node.toString());
+
 // console.log(node.readFromTheEnd(1));
 // // node.insertAfter('hello4','hey');
 // console.log(node.toString());
