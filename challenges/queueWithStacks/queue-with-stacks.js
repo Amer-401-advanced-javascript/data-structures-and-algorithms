@@ -7,39 +7,46 @@ let Stack = stackAndQueue.Stack;
 
 class PseudoQueue{
   contructor(){
-    this.firstStack = new Stack();
-    this.secondStack = new Stack();
+    this.firstStack;
+    this.secondStack;
   }
 
   enqueue(value){
-    return this.firstStack.push(value);
+    this.firstStack.push(value);
+    return this.firstStack;
   }
 
   dequeue(){
       
-    while(this.secondStack.top !== null){        
-      let popNodefromTheSecondStack = this.secondStack.pop();
-      this.firstStack.push(popNodefromTheSecondStack);
+    while(this.firstStack.top !== null){           
+      let popNodefromTheSecondStack = this.firstStack.pop();
+      this.secondStack.push(popNodefromTheSecondStack);
     }
     
-    return this.firstStack.pop();
+    return this.secondStack.pop();
   }
 }
 
 
 
 
-// let newStack = new Stack();
-// let newStack2 = new Stack();
+let newStack = new Stack();
+let newStack2 = new Stack();
 
-// newStack2.push('1');newStack2.push('2');newStack2.push('3');
 
-// let queue = new PseudoQueue();
-// queue.firstStack = newStack;
-// queue.secondStack = newStack2;
+let queue = new PseudoQueue();
+queue.firstStack = newStack;
+queue.secondStack = newStack2;
 
-// console.log(queue.dequeue());
-// console.log(queue.dequeue());
-// console.log(queue.dequeue());
+
+console.log(queue.enqueue(1));
+console.log(queue.enqueue(2));
+console.log(queue.enqueue(3));
+
+
+
+console.log(queue.dequeue());
+console.log(queue.dequeue());
+console.log(queue.dequeue());
 // console.log(queue.dequeue());
 

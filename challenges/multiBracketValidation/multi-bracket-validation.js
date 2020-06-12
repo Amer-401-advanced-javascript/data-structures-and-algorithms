@@ -2,15 +2,11 @@
 
 function multiBracketValidation(input){
   if(typeof(input) === 'string'){
-    // let count = 0;
-    let split = input.split('');
-    console.log(split.length);
-    
+    let split = input.split('');    
     let parnth=0;
     let squreBrackets = 0; 
     let curly = 0;
     split.forEach(value => {
-      //paranth
       switch(value){
       case '(':
         parnth++;
@@ -39,7 +35,7 @@ function multiBracketValidation(input){
     }
     
   }else {
-    return 'enter a String';
+    return 'Enter a String';
   }
     
 }
