@@ -28,3 +28,10 @@ class AnimalShelter{
     }
   }
 }
+
+// let sh = new AnimalShelter();
+
+// sh.enqueue('cat')
+// sh.enqueue('cat')
+// sh.enqueue('cat')
+// sh.enqueue('cat')
