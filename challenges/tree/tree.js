@@ -43,3 +43,17 @@ class BinaryTree {
     return results;
   }
 }
+
+class BinarySearchTree{
+  constructor(root){
+    this.root = root;
+  }
+    
+  add(){
+
+  }
+
+  contains(){
+
+  }
+}
