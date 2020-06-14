@@ -73,7 +73,7 @@ class BinarySearchTree{
     return this;
   }
 
-  contains(){
-
+  contains(value){
+    
   }
 }
