@@ -7,19 +7,22 @@ class AnimalShelter{
   }
 
   enqueue(animal){
-    if((animal!=='cat') || (animal!=='dog')){
-      return 'Dogs and Cats arthe only animal accepted';
+    console.log(animal === 'cat');
+    
+    if((animal!=='cat') && (animal!=='dog')){
+      let notAccepted = 'Dogs and Cats are the only animals accepted';
+      return notAccepted;
     }
     else if(animal === 'cat'){
       return this.catGroup.push(animal);
     }
     else if(animal === 'dog'){
-      return this.AnimalShelter.push(animal);
+      return this.dogGroup.push(animal);
     }
   }
 
   dequeue(pref){
-    if( (pref !== 'cat' || (pref !== 'dog')) ){
+    if( (pref !== 'cat' && (pref !== 'dog')) ){
       return null;
     }else if (pref === 'cat'){
       return this.catGroup.shift();
@@ -29,9 +32,12 @@ class AnimalShelter{
   }
 }
 
-// let sh = new AnimalShelter();
+// let animal = new AnimalShelter();
 
 // sh.enqueue('cat')
 // sh.enqueue('cat')
 // sh.enqueue('cat')
-// sh.enqueue('cat')
+// sh.enqueue('dog')
+// sh.dequeue('dog')
+// console.log(animal);
+
