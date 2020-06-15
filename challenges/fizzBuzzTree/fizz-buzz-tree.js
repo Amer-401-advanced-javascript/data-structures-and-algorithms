@@ -6,8 +6,7 @@ let BinarySearchTree = require('../tree/tree');
 function FizzBuzzTree (tree){
   let currentNode = tree.root;  
   traverse(currentNode);
-  return tree;
-  
+  return tree; 
 }
 
 function traverse(node){
@@ -37,8 +36,3 @@ BST.add(15);
 
 
 console.log(FizzBuzzTree(BST));
-
-
-
-
-
