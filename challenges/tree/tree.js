@@ -1,6 +1,6 @@
 'use strict';
 
-const node = require('./node');
+const Node = require('./node');
 
 class BinaryTree {
   constructor(root){
@@ -77,3 +77,5 @@ class BinarySearchTree{
     
   }
 }
+
+module.exports =BinarySearchTree;
