@@ -4,14 +4,23 @@ let BinarySearchTree = require('../tree/tree');
 
 // eslint-disable-next-line no-unused-vars
 function FizzBuzzTree (tree){
+    // console.log(tree.root);
     
   console.log('hello');
   let currentNode = tree.root;
+  //   console.log(currentNode);
+  
   traverse(currentNode);
-  return fizzbuzz(currentNode.value);
+  return tree;
+  
 }
 
 function traverse(node){
+    node.value = fizzbuzz(node.value);
+    console.log(node.value);
+//   node = fizzbuzz(node.value);
+//   console.log(node);
+  
   if(node.left) traverse(node.left);  
   if(node.right) traverse(node.right);
 }
@@ -35,7 +44,7 @@ BST.add(33);
 BST.add(15);
 // console.log(BST.root);
 
-console.log(FizzBuzzTree(BST));
+FizzBuzzTree(BST);
 
 
 
