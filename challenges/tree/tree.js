@@ -46,15 +46,15 @@ class BinaryTree {
   breadthFirst(){
     let results = [];
     let queue = [];
-    queue.push(this.root);
-    while(queue){
-      let node = queue.shift();
+    
+    queue.push(this.root);    
+    while(queue.length){
+      let node = queue.shift();      
       results.push(node.value);
       if (node.right !== null) queue.push(node.right);
       if(node.left !==null) queue.push(node.left);
     }
     return results;
-
   }
 }
 
@@ -91,5 +91,28 @@ class BinarySearchTree{
     
   }
 }
+
+// let bin = new BinarySearchTree();
+
+// bin.add(1);
+// bin.add(2);
+// bin.add(3);
+// bin.add(4);
+// bin.add(5);
+// bin.add(6);
+// bin.add(7);
+// console.log(bin.root);
+
+
+// let bin2 = new BinaryTree(bin.root);
+// console.log(bin2.breadthFirst());
+
+
+
+
+
+
+
+
 
 module.exports =BinarySearchTree;
