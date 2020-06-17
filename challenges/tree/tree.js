@@ -56,6 +56,21 @@ class BinaryTree {
     }
     return results;
   }
+
+  find_maximum_value(){
+    let currentNode = this.root;
+    if(!currentNode) return;
+    let maxValue = currentNode.value;
+    let _walk = (currentNode)=>{
+      if(currentNode.left) _walk(currentNode.left);
+      if(currentNode.value > maxValue) maxValue = currentNode.value;
+      if(currentNode.right) _walk(currentNode.right);
+      if(currentNode.value > maxValue) maxValue = currentNode.value;
+
+    };
+    _walk(currentNode);
+    return maxValue;
+  }
 }
 
 class BinarySearchTree{
@@ -104,10 +119,22 @@ class BinarySearchTree{
 // console.log(bin.root);
 
 
-// let bin2 = new BinaryTree(bin.root);
 // console.log(bin2.breadthFirst());
+// let node = new Node(1);let node2 =new Node(87);
+// let node3 =new Node(5);
+// let node4 =new Node(47);
+// let node5 =new Node(900);
 
 
+
+// node.right = node2;
+// node.left = node3;
+// node3.right = node4;
+// node3.left = node5;
+
+// let bin2 = new BinaryTree(node);
+
+// console.log(bin2.find_maximum_value());
 
 
 
