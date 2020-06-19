@@ -8,7 +8,8 @@ in this challange we are required to use binary search algorithm to find the ind
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
-	O(log n)
+	time O(log n)
+	space O(1)
 
 ## Solution
 <!-- Embedded whiteboard image -->
