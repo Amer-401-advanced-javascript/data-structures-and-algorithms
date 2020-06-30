@@ -19,4 +19,5 @@ Data Structure and Algorithms Table of Content
 | Challange16  | [C16](https://github.com/Amer-401-advanced-javascript/data-structures-and-algorithms/tree/fizzbuzz-tree/challenges/fizzBuzzTree) | 
 | Challange17  | [C17](https://github.com/Amer-401-advanced-javascript/data-structures-and-algorithms/tree/find-maximum-binary-tree/challenges/tree) |
 | Challange26  | [C26](https://github.com/Amer-401-advanced-javascript/data-structures-and-algorithms/tree/selectionSort/challenges/selectionSort) |
+| Challange27  | [C26](https://github.com/Amer-401-advanced-javascript/data-structures-and-algorithms/tree/mergeSort/challenges/mergeSort) |
 
