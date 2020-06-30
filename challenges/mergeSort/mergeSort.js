@@ -12,6 +12,8 @@ function mergeSort (arr) {
 
     merge(left, right, arr);
   }
+  console.log(arr);
+  
 }
 
 function merge( left, right, arr){
@@ -27,6 +29,11 @@ function merge( left, right, arr){
       arr[k] = right[j];
       j++;
     }
+  }
+  if(i === left.length){
+    right = arr;
+  } else {
+    left = arr;
   }
 }
 
