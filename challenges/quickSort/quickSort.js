@@ -11,8 +11,26 @@ function quickSort(arr, left, right){
 }
 
 function partition(arr, left, right){
-    let pivot = arr[right]
+  let pivot = arr[right];
 
-    let low = left - 1;
-    
+  let low = left - 1;
+  for(let i = left; i < right; i++){
+    if(arr[i] <= pivot){
+      low++;
+      swap(arr, left, right);
+    }
+  }
+  swap(arr, right, low+1);
+  return low+1;
 }
+
+function swap (arr, i, low){
+  let temp;
+  temp = arr[i];
+  arr[i]= arr[low];
+  arr[low] = temp;
+}
+
+let p = [4,32,76,23,7];
+quickSort(p,0,2);
+console.log(p);
