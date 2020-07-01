@@ -37,4 +37,4 @@ function merge( left, right, arr){
   }
 }
 
-mergeSort([4,98,43,86,52,66]);
+mergeSort([98,43,86,52,66]);
