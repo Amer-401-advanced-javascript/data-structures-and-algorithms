@@ -21,4 +21,6 @@ Data Structure and Algorithms Table of Content
 | Challange26  | [C26](https://github.com/Amer-401-advanced-javascript/data-structures-and-algorithms/tree/insertionSort/challenges/insertionSort) |
 | Challange27  | [C27](https://github.com/Amer-401-advanced-javascript/data-structures-and-algorithms/tree/mergeSort/challenges/mergeSort) |
 | Challange28  | [C28](https://github.com/Amer-401-advanced-javascript/data-structures-and-algorithms/tree/quickSort/challenges/quickSort) |
+| Challange30  | [C30](https://github.com/Amer-401-advanced-javascript/data-structures-and-algorithms/tree/hashtable/challenges/hashtable) |
+
 
