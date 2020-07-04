@@ -3,10 +3,12 @@
 function mergeSort (arr) {
   let num = arr.length;
   if(num > 1){
-    let mid =   num/2;
+    let mid =  Math.floor(num/2);
     let left = arr.slice(0, mid);
-    let right = arr.slice(mid, arr.length); 
-
+    // console.log(left);
+    
+    let right = arr.slice(mid); 
+    
     mergeSort(left);
     mergeSort(right);
 
@@ -22,14 +24,16 @@ function merge( left, right, arr){
   let k = 0;
 
   while ((i < left.length) && (j < right.length)) {
-    if(left[i] <= right[i]){
+    if(left[i] <= right[j]){
       arr[k] = left[i];
-      i++;
+      ++i;
     } else {
       arr[k] = right[j];
-      j++;
+      ++j;
     }
+    ++k;
   }
+  
   if(i === left.length){
     right = arr;
   } else {
