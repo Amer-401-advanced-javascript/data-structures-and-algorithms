@@ -89,8 +89,3 @@ class Hashmap{
 // newHash.add('Amer', 'Note5');
 // console.log(newHash.get('Amer'));
 // console.log(newHash.contains('amer'));
-
-
-
-
-
