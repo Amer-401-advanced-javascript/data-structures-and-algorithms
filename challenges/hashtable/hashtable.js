@@ -51,9 +51,7 @@ class Hashmap{
   }
 
   add(key, value){
-    let hashedKey = this.hash(key); //this wu=ill give us an index
-    console.log(hashedKey);
-    
+    let hashedKey = this.hash(key); //this wu=ill give us an index    
     if(!this.map[hashedKey]){
       this.map[hashedKey] = new LinkedList();
     }
@@ -81,8 +79,8 @@ class Hashmap{
     }
   }
 }
-
-// let newHash = new Hashmap(1024);
+let newHash = new Hashmap(1024);
+module.exports = newHash;
 // console.log(newHash.hash('Amer'));
 
 // newHash.add('Amer', 'S4');
