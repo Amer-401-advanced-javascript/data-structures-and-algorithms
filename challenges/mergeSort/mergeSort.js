@@ -4,9 +4,8 @@ function mergeSort (arr) {
   let num = arr.length;
   if(num > 1){
     let mid =  Math.floor(num/2);
-    let left = arr.slice(0, mid);
-    // console.log(left);
-    
+
+    let left = arr.slice(0, mid);    
     let right = arr.slice(mid); 
     
     mergeSort(left);
@@ -14,8 +13,8 @@ function mergeSort (arr) {
 
     merge(left, right, arr);
   }
-  console.log(arr);
-  
+ 
+  return arr;
 }
 
 function merge( left, right, arr){
@@ -26,19 +25,24 @@ function merge( left, right, arr){
   while ((i < left.length) && (j < right.length)) {
     if(left[i] <= right[j]){
       arr[k] = left[i];
-      ++i;
+      i++;
     } else {
       arr[k] = right[j];
-      ++j;
+      j++;
     }
-    ++k;
+    k++;
   }
   
-  if(i === left.length){
-    right = arr;
-  } else {
-    left = arr;
+  while (i < left.length) {
+    arr[k] = left[i];
+    i++;
+    k++;
+  }
+  while (j < right.length) {
+    arr[k] = right[j];
+    j++;
+    k++;
   }
 }
 
-mergeSort([98,43,86,52,66]);
+console.log(mergeSort([98,43,86,52,66]));
