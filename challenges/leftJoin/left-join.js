@@ -14,11 +14,11 @@ function leftJoin(leftHash, rightHash) {
       let flag =rightHashArray[arrindex];
       
       if(flag){          
-         arr = [];
+        arr = [];
         arr.push(value,hashElement.head.value[value],Object.values(rightHashArray[arrindex].head.value)[0]);
         result.push(arr);
       }else {
-         arr = [];
+        arr = [];
         arr.push(value,hashElement.head.value[value],null);
         result.push(arr);
       }
