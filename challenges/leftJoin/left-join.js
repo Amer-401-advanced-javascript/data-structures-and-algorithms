@@ -13,7 +13,7 @@ function leftJoin(leftHash, rightHash) {
       let arrindex =leftHash.hash(value);
       let flag =rightHashArray[arrindex];
       
-      if(flag){          
+      if(flag && (value === Object.keys(rightHashArray[arrindex].head.value)[0])){          
         arr = [];
         arr.push(value,hashElement.head.value[value],Object.values(rightHashArray[arrindex].head.value)[0]);
         result.push(arr);
