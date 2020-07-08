@@ -24,5 +24,6 @@ Data Structure and Algorithms Table of Content
 | Challange30  | [C30](https://github.com/Amer-401-advanced-javascript/data-structures-and-algorithms/tree/hashtable/challenges/hashtable) |
 | Challange31  | [C31](https://github.com/Amer-401-advanced-javascript/data-structures-and-algorithms/tree/repeated-word/challenges/repeatedWord) |
 | Challange32  | [C32](https://github.com/Amer-401-advanced-javascript/data-structures-and-algorithms/tree/tree-intersection/challenges/treeIntersection) |
+| Challange33  | [C33](https://github.com/Amer-401-advanced-javascript/data-structures-and-algorithms/tree/left-join/challenges/leftJoin) |
 
 
