@@ -80,7 +80,7 @@ class Hashmap{
   }
 }
 let newHash = new Hashmap(1024);
-module.exports = newHash;
+module.exports = Hashmap;
 // console.log(newHash.hash('Amer'));
 
 // newHash.add('Amer', 'S4');
