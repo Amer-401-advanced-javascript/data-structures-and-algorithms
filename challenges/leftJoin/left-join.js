@@ -12,20 +12,16 @@ function leftJoin(leftHash, rightHash) {
       let arrindex =leftHash.hash(value);
       let flag =rightHashArray[arrindex];
       
-      if(flag){
-          console.log(flag);
-          
+      if(flag){          
         let arr = [];
-        arr.push(value,hashElement.head.value[value],Object.values(rightHashArray[arrindex].head.value));
+        arr.push(value,hashElement.head.value[value],Object.values(rightHashArray[arrindex].head.value)[0]);
         result.push(arr);
       }else {
         let arr = [];
         arr.push(value,hashElement.head.value[value],null);
         result.push(arr);
       }
-    });
-    // console.log(result);
-    
+    });    
   });
   return result;
 }
