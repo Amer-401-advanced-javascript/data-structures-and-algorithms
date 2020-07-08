@@ -13,12 +13,12 @@ function leftJoin(leftHash, rightHash) {
       let flag =rightHashArray[arrindex];
       
       if(flag){
-        console.log('fff');
+          console.log(flag);
+          
         let arr = [];
-        arr.push(value,hashElement.head.value[value],rightHashArray[flag]);
+        arr.push(value,hashElement.head.value[value],Object.values(rightHashArray[arrindex].head.value));
         result.push(arr);
       }else {
-        console.log('dsdsdsf');
         let arr = [];
         arr.push(value,hashElement.head.value[value],null);
         result.push(arr);

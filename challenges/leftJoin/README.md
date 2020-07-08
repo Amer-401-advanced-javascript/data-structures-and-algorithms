@@ -12,3 +12,6 @@ BigO:
 
 ## Solution
 <!-- Embedded whiteboard image -->
+
+algorithm 
+create a function that accept two hashmaps loop around each one of them and store their values
