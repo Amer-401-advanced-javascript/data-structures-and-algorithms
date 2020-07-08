@@ -3,30 +3,29 @@ const Hashmap = require('../hashtable/hashtable');
 
 function leftJoin(leftHash, rightHash) {
 //   console.log(leftHash);
-let result = [];
-let arr = []
+  let result = [];
+  let arr = [];
+  let rightHashArray = rightHash.map;
+  let leftHashArray = leftHash.map;
 
-  leftHash.map.forEach(hashElement => {
+  leftHashArray.forEach(hashElement => {
     Object.keys(hashElement.head.value).forEach(value => {
-
-      arr.push(value);
-      result.push(arr);
-        
-    });
+      let arrindex =leftHash.hash(value);
+      let flag =rightHashArray[arrindex];
       
+      if(flag){
+          console.log('fff');
+          
+        result.push(value,hashElement.head.value[value],rightHashArray)
+      }else {
+        console.log('dsdsdsf');
+        result.push(value,hashElement.head.value[value],null);
+      }
+    });
+    // console.log(result);
+    
+    return result;
   });
- 
-  //   const leftKeys = Object.keys(leftHash);
-  //   const res = new Array(leftKeys.length);
-  
-  //   for (let i = 0; i < leftKeys.length; i++) {
-  //     const key = leftKeys[i];
-  //     const valLeft = leftHash.get(key);
-  //     const valRight = rightHash.get(key);
-  //     res[i] = [key, valLeft, valRight];
-  //   }
-  
-  //   return res;
 }
 
 
