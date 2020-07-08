@@ -4,6 +4,7 @@ const Hashmap = require('../hashtable/hashtable');
 function leftJoin(leftHash, rightHash) {
 //   console.log(leftHash);
   let result = [];
+  let arr = [];
   let rightHashArray = rightHash.map;
   let leftHashArray = leftHash.map;
 
@@ -13,11 +14,11 @@ function leftJoin(leftHash, rightHash) {
       let flag =rightHashArray[arrindex];
       
       if(flag){          
-        let arr = [];
+         arr = [];
         arr.push(value,hashElement.head.value[value],Object.values(rightHashArray[arrindex].head.value)[0]);
         result.push(arr);
       }else {
-        let arr = [];
+         arr = [];
         arr.push(value,hashElement.head.value[value],null);
         result.push(arr);
       }
