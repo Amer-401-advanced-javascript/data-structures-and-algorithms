@@ -52,30 +52,30 @@ class Graph {
 }
 
 
-const graph = new Graph();
+// const graph = new Graph();
 
-const two = new Vertex(2);
-const three = new Vertex(3);
-const six = new Vertex(6);
-const seven = new Vertex(7);
-const eight = new Vertex(8);
-const ten = new Vertex(10);
+// const two = new Vertex(2);
+// const three = new Vertex(3);
+// const six = new Vertex(6);
+// const seven = new Vertex(7);
+// const eight = new Vertex(8);
+// const ten = new Vertex(10);
 
-graph.addVertex(two);
-graph.addVertex(three);
-graph.addVertex(six);
-graph.addVertex(seven);
-graph.addVertex(eight);
-graph.addVertex(ten);
+// graph.addVertex(two);
+// graph.addVertex(three);
+// graph.addVertex(six);
+// graph.addVertex(seven);
+// graph.addVertex(eight);
+// graph.addVertex(ten);
 
-graph.addDirectedEdge(two, seven);
-graph.addDirectedEdge(three, eight);
-graph.addDirectedEdge(six, seven);
-graph.addDirectedEdge(six, eight);
-graph.addDirectedEdge(ten, two);
-graph.addDirectedEdge(ten, three);
-graph.addDirectedEdge(ten, six);
-graph.addDirectedEdge(eight, seven);
+// graph.addDirectedEdge(two, seven);
+// graph.addDirectedEdge(three, eight);
+// graph.addDirectedEdge(six, seven);
+// graph.addDirectedEdge(six, eight);
+// graph.addDirectedEdge(ten, two);
+// graph.addDirectedEdge(ten, three);
+// graph.addDirectedEdge(ten, six);
+// graph.addDirectedEdge(eight, seven);
 
 
-console.log(graph.GetNeighbors(ten));
+// console.log(graph.GetNeighbors(ten));

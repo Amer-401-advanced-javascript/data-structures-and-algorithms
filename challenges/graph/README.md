@@ -18,6 +18,21 @@ Size()
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+AddNode() ==> Time:
+              Space:
+
+AddEdge() ==> Time:
+              Space:
+
+GetNodes() ==> Time:
+               Space:
+
+GetNeighbors() ==> Time:
+                   Space:
+
+Size() ==> Time:
+           Space:
 
 ## API
 <!-- Description of each method publicly available in your Graph -->
+AddNode() ===> 
