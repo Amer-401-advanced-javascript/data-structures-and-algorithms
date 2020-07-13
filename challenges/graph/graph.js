@@ -79,3 +79,4 @@ class Graph {
 
 
 // console.log(graph.GetNeighbors(ten));
+module.exports = {Graph,Vertex};
